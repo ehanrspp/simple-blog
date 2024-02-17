@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 public class Comment {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private Long id;
 	
@@ -40,5 +40,41 @@ public class Comment {
 	}
 	public Long getId() {
 		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	public Long getPostId() {
+		return postId;
+	}
+	
+	public void setPostId(Long postId) {
+		this.postId = postId;
+	}
+	
+	public String getUser() {
+		return user;
+	}
+	
+	public void setUser (String user) {
+		this.user = user;
+	}
+	
+	public String getComment() {
+		return comment;
+	}
+	
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+	
+	public Date getRegDate() {
+		return regDate;
+	}
+	
+	public void setRegDate (Date regDate) {
+		this.regDate = regDate;
 	}
 }
